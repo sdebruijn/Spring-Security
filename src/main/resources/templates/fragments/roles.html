@@ -7,17 +7,26 @@
 
 <title>Spring Security</title>
 
-<!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
 </head>
 <body>
 
 	<div class="container">
-		<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
-		<div>
+		<div th:fragment="roles">
 			<h2>Index Page</h2>
 			<p>Anyone may access this page.</p>
+
+			<h3>User Details</h3>
+			<table class="table table-striped">
+				<tr>
+					<th>Username</th>
+					<th>Roles</th>
+				</tr>
+				<tr>
+					<td th:text="${username}"></td>
+					<td th:text="${roles}"></td>
+				</tr>
+			</table>
 		</div>
-		<!--/*/ <th:block th:include="fragments/roles :: roles"></th:block> /*/-->
 	</div>
 </body>
 </html>
