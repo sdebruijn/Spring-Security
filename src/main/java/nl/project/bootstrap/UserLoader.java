@@ -24,7 +24,6 @@ public class UserLoader implements ApplicationListener<ContextRefreshedEvent> {
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
-    	BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
     	
         User sijmen = new User();
         sijmen.setUserName("sijmen");
